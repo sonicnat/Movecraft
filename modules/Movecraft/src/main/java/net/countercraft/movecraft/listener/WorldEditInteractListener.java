@@ -176,7 +176,7 @@ public class WorldEditInteractListener implements Listener {
         file = new File(repairStateName);
 
         HashHitBox hitBox = pCraft.getHitBox();
-        Vector size = new Vector(hitBox.getXLength(), (hitBox.getYLength()) + 1, hitBox.getZLength());
+        Vector size = new Vector(hitBox.getXLength() + 1, (hitBox.getYLength()) + 1, hitBox.getZLength() + 1);
         Vector origin = new Vector(sign.getX(), sign.getY(), sign.getZ());
         Vector offset = new Vector(hitBox.getMinX() - sign.getX(), hitBox.getMinY() - sign.getY(), hitBox.getMinZ() - sign.getZ());
         CuboidClipboard cuboidClipboard = new CuboidClipboard(size, origin, offset);
